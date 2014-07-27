@@ -124,9 +124,7 @@ class Sudoku
   end
 end
 #------Driver Code-------
-boards = File.readlines('sample.unsolved.txt')
-
-boards.each_with_index do |board_string, board_num|
+File.readlines('sample.unsolved.txt').each_with_index do |board_string, board_num|
   game = Sudoku.new(board_string.chomp)
   game.solve!
   puts "#{board_num + 1}"
